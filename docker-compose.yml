@@ -207,11 +207,11 @@ services:
     networks:
       - debezium-net
 
-  laravel-v2:
+  laravel-sync-data:
     build:
-      context: ./example-app-v2
+      context: ./sync-data
       dockerfile: Dockerfile
-    container_name: laravel-app-v2
+    container_name: laravel-sync-data
     restart: unless-stopped
     depends_on:
       mysql-primary:

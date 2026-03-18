@@ -19,6 +19,10 @@ RUN composer install \
 # ─────────────────────────────────────────────────────────────
 FROM php:8.3-fpm-alpine
 
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+
 # System & PHP extensions
 RUN apk add --no-cache \
         nginx \

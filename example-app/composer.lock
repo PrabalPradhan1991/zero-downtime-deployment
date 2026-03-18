@@ -4,8 +4,75 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d27af61d1911fff8736ef97a06cbad5c",
+    "content-hash": "84815fb9a6345d51bca9e0c9baecaa73",
     "packages": [
+        {
+            "name": "beberlei/assert",
+            "version": "v3.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beberlei/assert.git",
+                "reference": "b5fd8eacd8915a1b627b8bfc027803f1939734dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/b5fd8eacd8915a1b627b8bfc027803f1939734dd",
+                "reference": "b5fd8eacd8915a1b627b8bfc027803f1939734dd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-simplexml": "*",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "*",
+                "phpstan/phpstan": "*",
+                "phpunit/phpunit": ">=6.0.0",
+                "yoast/phpunit-polyfills": "^0.1.0"
+            },
+            "suggest": {
+                "ext-intl": "Needed to allow Assertion::count(), Assertion::isCountable(), Assertion::minCount(), and Assertion::maxCount() to operate on ResourceBundles"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/Assert/functions.php"
+                ],
+                "psr-4": {
+                    "Assert\\": "lib/Assert"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Richard Quadling",
+                    "email": "rquadling@gmail.com",
+                    "role": "Collaborator"
+                }
+            ],
+            "description": "Thin assertion library for input validation in business models.",
+            "keywords": [
+                "assert",
+                "assertion",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/beberlei/assert/issues",
+                "source": "https://github.com/beberlei/assert/tree/v3.3.3"
+            },
+            "time": "2024-07-15T13:18:35+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.14.8",
@@ -134,6 +201,86 @@
                 }
             ],
             "time": "2024-02-09T16:56:22+00:00"
+        },
+        {
+            "name": "dedoc/scramble",
+            "version": "v0.13.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dedoc/scramble.git",
+                "reference": "43a5dd62b6a5d7d6fd0125092985d78ae22f0ffe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dedoc/scramble/zipball/43a5dd62b6a5d7d6fd0125092985d78ae22f0ffe",
+                "reference": "43a5dd62b6a5d7d6fd0125092985d78ae22f0ffe",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.0|^11.0|^12.0|^13.0",
+                "myclabs/deep-copy": "^1.12",
+                "nikic/php-parser": "^5.0",
+                "php": "^8.1",
+                "phpstan/phpdoc-parser": "^1.0|^2.0",
+                "spatie/laravel-package-tools": "^1.9.2"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.3",
+                "laravel/pint": "^v1.1.0",
+                "nunomaduro/collision": "^7.0|^8.0",
+                "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+                "pestphp/pest": "^2.34|^3.7|^4.4",
+                "pestphp/pest-plugin-laravel": "^2.3|^3.1|^4.1",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpunit/phpunit": "^10.5|^11.5.3|^12.5.12",
+                "spatie/laravel-permission": "^6.10|^7.2",
+                "spatie/pest-plugin-snapshots": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dedoc\\Scramble\\ScrambleServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dedoc\\Scramble\\": "src",
+                    "Dedoc\\Scramble\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Lytvynenko",
+                    "email": "litvinenko95@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Automatic generation of API documentation for Laravel applications.",
+            "homepage": "https://github.com/dedoc/scramble",
+            "keywords": [
+                "documentation",
+                "laravel",
+                "openapi"
+            ],
+            "support": {
+                "issues": "https://github.com/dedoc/scramble/issues",
+                "source": "https://github.com/dedoc/scramble/tree/v0.13.16"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/romalytvynenko",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-03-17T21:42:41+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -509,6 +656,47 @@
             "time": "2025-03-06T22:45:56+00:00"
         },
         {
+            "name": "flix-tech/avro-php",
+            "version": "5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flix-tech/avro-php.git",
+                "reference": "8c040b4dc4bd9163176cf3d10ac898215d4063ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flix-tech/avro-php/zipball/8c040b4dc4bd9163176cf3d10ac898215d4063ca",
+                "reference": "8c040b4dc4bd9163176cf3d10ac898215d4063ca",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5"
+            },
+            "suggest": {
+                "ext-gmp": "Large integer support for 32-bit platforms.",
+                "ext-snappy": "Snappy support for Snappy codec (mainly Google).",
+                "ext-zlib": "Zlib support for Deflate codec."
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Avro schema encoder/decoder. Fork of rg/avro-php",
+            "support": {
+                "source": "https://github.com/flix-tech/avro-php/tree/5.2.0"
+            },
+            "time": "2026-01-27T15:09:55+00:00"
+        },
+        {
             "name": "fruitcake/php-cors",
             "version": "v1.4.0",
             "source": {
@@ -578,6 +766,54 @@
                 }
             ],
             "time": "2025-12-03T09:33:47+00:00"
+        },
+        {
+            "name": "functional-php/fantasy-land",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/functional-php/fantasy-land.git",
+                "reference": "9a43201d827ced038ffd374f2d018d7a54ad33e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/functional-php/fantasy-land/zipball/9a43201d827ced038ffd374f2d018d7a54ad33e2",
+                "reference": "9a43201d827ced038ffd374f2d018d7a54ad33e2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2",
+                "giorgiosironi/eris": "^0.9",
+                "phpunit/phpunit": "^5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/FantasyLand/functions.php"
+                ],
+                "psr-4": {
+                    "FunctionalPHP\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Habryn",
+                    "email": "widmogrod+github@gmail.com"
+                }
+            ],
+            "description": "Specification for interoperability of common algebraic structures in PHP",
+            "support": {
+                "issues": "https://github.com/functional-php/fantasy-land/issues",
+                "source": "https://github.com/functional-php/fantasy-land/tree/1.0.2"
+            },
+            "time": "2024-12-18T16:28:32+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -2023,6 +2259,229 @@
             "time": "2026-03-08T20:05:35+00:00"
         },
         {
+            "name": "mateusjunges/avro-serde-php",
+            "version": "v3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mateusjunges/avro-serde-php.git",
+                "reference": "72038efe6ac23c3ecf742b83010a456cdccc7d18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mateusjunges/avro-serde-php/zipball/72038efe6ac23c3ecf742b83010a456cdccc7d18",
+                "reference": "72038efe6ac23c3ecf742b83010a456cdccc7d18",
+                "shasum": ""
+            },
+            "require": {
+                "beberlei/assert": "^2.9.9|~3.0",
+                "flix-tech/avro-php": "^5.0",
+                "guzzlehttp/promises": "^2.0",
+                "mateusjunges/confluent-schema-registry-api": "^9.0",
+                "php": "^8.0",
+                "widmogrod/php-functional": "^6.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^1.11",
+                "phpbench/phpbench": "1.0.0-alpha2",
+                "phpunit/phpunit": "^9.4.2",
+                "roave/security-advisories": "dev-latest",
+                "symfony/serializer": "^3.4|^4.3",
+                "vlucas/phpdotenv": "~2.4"
+            },
+            "suggest": {
+                "doctrine/annotations": "To enable the generation of avro schemas from annotations",
+                "symfony/serializer": "To integrate avro-serde-php into symfony ecosystem"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev",
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Protocol.php",
+                    "src/Serialize.php",
+                    "src/Common.php"
+                ],
+                "psr-4": {
+                    "FlixTech\\AvroSerializer\\Objects\\": "src/Objects",
+                    "FlixTech\\AvroSerializer\\Integrations\\": "integrations/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Ploch",
+                    "email": "thomas.ploch@flixbus.com"
+                },
+                {
+                    "name": "Mateus Junges",
+                    "email": "mateus@junges.dev"
+                }
+            ],
+            "description": "A library to serialize and deserialize Avro records making use of the confluent schema registry",
+            "keywords": [
+                "Confluent",
+                "avro",
+                "confluent-platform",
+                "deserialization",
+                "kafka",
+                "schema-evolution",
+                "schema-registry",
+                "serialization",
+                "serializer",
+                "symfony",
+                "symfony-serializer"
+            ],
+            "support": {
+                "source": "https://github.com/mateusjunges/avro-serde-php/tree/v3.0.1"
+            },
+            "time": "2024-12-19T16:43:29+00:00"
+        },
+        {
+            "name": "mateusjunges/confluent-schema-registry-api",
+            "version": "9.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mateusjunges/schema-registry-php-client.git",
+                "reference": "296a045cfab39d98bce92a4a1d48ed2c629213d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mateusjunges/schema-registry-php-client/zipball/296a045cfab39d98bce92a4a1d48ed2c629213d7",
+                "reference": "296a045cfab39d98bce92a4a1d48ed2c629213d7",
+                "shasum": ""
+            },
+            "require": {
+                "beberlei/assert": "~2.7|~3.0",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "flix-tech/avro-php": "^5.0",
+                "guzzlehttp/guzzle": "^7.0",
+                "guzzlehttp/promises": "^2.0",
+                "guzzlehttp/psr7": "^1.7|^2.1",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "doctrine/cache": "~1.3",
+                "phpunit/phpunit": "^9.4.2",
+                "psr/cache": "^1.0",
+                "psr/simple-cache": "^1.0",
+                "raphhh/trex-reflection": "~1.0",
+                "symfony/cache": "^5.1"
+            },
+            "suggest": {
+                "doctrine/cache": "If you want to use the DoctrineCacheAdapter",
+                "psr/cache": "If you want to use the CacheItemPoolAdapter",
+                "psr/simple-cache": "If you want to use the SimpleCacheAdapter"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Requests/Functions.php",
+                    "src/Constants/Constants.php"
+                ],
+                "psr-4": {
+                    "FlixTech\\SchemaRegistryApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Ploch",
+                    "email": "thomas.ploch@flixbus.com"
+                },
+                {
+                    "name": "Mateus Junges",
+                    "email": "mateus@junges.dev"
+                }
+            ],
+            "description": "A PHP 7.4+ library to consume the Confluent Schema Registry REST API.",
+            "support": {
+                "source": "https://github.com/mateusjunges/schema-registry-php-client/tree/9.0.0"
+            },
+            "time": "2023-10-06T16:05:50+00:00"
+        },
+        {
+            "name": "mateusjunges/laravel-kafka",
+            "version": "v2.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mateusjunges/laravel-kafka.git",
+                "reference": "a86f6aa5abfa27b08914642c0b41be5d3487eaef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mateusjunges/laravel-kafka/zipball/a86f6aa5abfa27b08914642c0b41be5d3487eaef",
+                "reference": "a86f6aa5abfa27b08914642c0b41be5d3487eaef",
+                "shasum": ""
+            },
+            "require": {
+                "ext-rdkafka": "^6.0",
+                "illuminate/contracts": "^12.0|^13.0",
+                "illuminate/support": "^12.0|^13.0",
+                "mateusjunges/avro-serde-php": "^3.0",
+                "monolog/monolog": "^3",
+                "php": "^8.2|^8.3|^8.4|^8.5"
+            },
+            "require-dev": {
+                "laravel/pint": "dev-main",
+                "mockery/mockery": "^1.6.12",
+                "orchestra/testbench": "^10.0|^11.0",
+                "phpunit/phpunit": "^10.5|^11.5.3|^12.5.12",
+                "predis/predis": "^1|^3.4",
+                "rector/rector": "^0.19.8|^2.3"
+            },
+            "suggest": {
+                "ext-pcntl": "Required to enable all features of the kafka consumer",
+                "kwn/php-rdkafka-stubs": "Useful for providing IDE autocompletion and static analysis when working with Kafka, version ^2.2.1."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Junges\\Kafka\\Providers\\LaravelKafkaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Junges\\Kafka\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mateusjunges",
+                    "email": "mateus@junges.dev",
+                    "role": "Senior Software Engineer"
+                }
+            ],
+            "description": "A kafka driver for laravel",
+            "support": {
+                "issues": "https://github.com/mateusjunges/laravel-kafka/issues",
+                "source": "https://github.com/mateusjunges/laravel-kafka/tree/v2.11.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mateusjunges",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-03-05T20:52:59+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "3.10.0",
             "source": {
@@ -2124,6 +2583,66 @@
                 }
             ],
             "time": "2026-01-02T08:56:05+00:00"
+        },
+        {
+            "name": "myclabs/deep-copy",
+            "version": "1.13.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/myclabs/DeepCopy.git",
+                "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/07d290f0c47959fd5eed98c95ee5602db07e0b6a",
+                "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "conflict": {
+                "doctrine/collections": "<1.6.8",
+                "doctrine/common": "<2.13.3 || >=3 <3.2.2"
+            },
+            "require-dev": {
+                "doctrine/collections": "^1.6.8",
+                "doctrine/common": "^2.13.3 || ^3.2.2",
+                "phpspec/prophecy": "^1.10",
+                "phpunit/phpunit": "^7.5.20 || ^8.5.23 || ^9.5.13"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/DeepCopy/deep_copy.php"
+                ],
+                "psr-4": {
+                    "DeepCopy\\": "src/DeepCopy/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Create deep copies (clones) of your objects",
+            "keywords": [
+                "clone",
+                "copy",
+                "duplicate",
+                "object",
+                "object graph"
+            ],
+            "support": {
+                "issues": "https://github.com/myclabs/DeepCopy/issues",
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.4"
+            },
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/myclabs/deep-copy",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-08-01T08:46:24+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2607,6 +3126,53 @@
                 }
             ],
             "time": "2025-12-27T19:41:33+00:00"
+        },
+        {
+            "name": "phpstan/phpdoc-parser",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpdoc-parser.git",
+                "reference": "a004701b11273a26cd7955a61d67a7f1e525a45a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/a004701b11273a26cd7955a61d67a7f1e525a45a",
+                "reference": "a004701b11273a26cd7955a61d67a7f1e525a45a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^2.0",
+                "nikic/php-parser": "^5.3.0",
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0",
+                "phpunit/phpunit": "^9.6",
+                "symfony/process": "^5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPStan\\PhpDocParser\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPDoc parser with support for nullable, intersection and generic types",
+            "support": {
+                "issues": "https://github.com/phpstan/phpdoc-parser/issues",
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.2"
+            },
+            "time": "2026-01-25T14:56:51+00:00"
         },
         {
             "name": "psr/clock",
@@ -3296,6 +3862,67 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.9.2"
             },
             "time": "2025-12-14T04:43:48+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.93.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "0d097bce95b2bf6802fb1d83e1e753b0f5a948e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/0d097bce95b2bf6802fb1d83e1e753b0f5a948e7",
+                "reference": "0d097bce95b2bf6802fb1d83e1e753b0f5a948e7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.0|^11.0|^12.0|^13.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^8.0|^9.2|^10.0|^11.0",
+                "pestphp/pest": "^2.1|^3.1|^4.0",
+                "phpunit/php-code-coverage": "^10.0|^11.0|^12.0",
+                "phpunit/phpunit": "^10.5|^11.5|^12.5",
+                "spatie/pest-plugin-test-time": "^2.2|^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.93.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-02-21T12:49:54+00:00"
         },
         {
             "name": "symfony/clock",
@@ -6010,6 +6637,76 @@
                 }
             ],
             "time": "2024-11-21T01:49:47+00:00"
+        },
+        {
+            "name": "widmogrod/php-functional",
+            "version": "6.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/widmogrod/php-functional.git",
+                "reference": "e87398e029b07784cf028ff3363ed61242f58d73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/widmogrod/php-functional/zipball/e87398e029b07784cf028ff3363ed61242f58d73",
+                "reference": "e87398e029b07784cf028ff3363ed61242f58d73",
+                "shasum": ""
+            },
+            "require": {
+                "functional-php/fantasy-land": "^1",
+                "php": "^7.1|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2",
+                "giorgiosironi/eris": "^0.9",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Functional/array.php",
+                    "src/Functional/functions.php",
+                    "src/Functional/miscellaneous.php",
+                    "src/Functional/listt.php",
+                    "src/Functional/zipping.php",
+                    "src/Functional/sublist.php",
+                    "src/Functional/infinit.php",
+                    "src/Functional/predicates.php",
+                    "src/Functional/strings.php",
+                    "src/Functional/monoid.php",
+                    "src/Functional/setoid.php",
+                    "src/Monad/Either/functions.php",
+                    "src/Monad/Maybe/functions.php",
+                    "src/Monad/Free/functions.php",
+                    "src/Monad/IO/functions.php",
+                    "src/Monad/IO/errors.php",
+                    "src/Monad/Reader/functions.php",
+                    "src/Monad/State/functions.php",
+                    "src/Monad/Writer/functions.php",
+                    "src/Monad/Control/Doo/actions.php",
+                    "src/Monad/Control/Doo/interpretation.php",
+                    "src/Useful/match.php"
+                ],
+                "psr-4": {
+                    "Widmogrod\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Habryn",
+                    "email": "widmogrod@gmail.com"
+                }
+            ],
+            "description": "Functors, Applicative and Monads are fascinating concept. Purpose of this library is to explore them in OOP PHP world.",
+            "support": {
+                "issues": "https://github.com/widmogrod/php-functional/issues",
+                "source": "https://github.com/widmogrod/php-functional/tree/6.0.2"
+            },
+            "time": "2024-12-18T18:24:14+00:00"
         }
     ],
     "packages-dev": [
@@ -6892,66 +7589,6 @@
             "time": "2024-05-16T03:13:13+00:00"
         },
         {
-            "name": "myclabs/deep-copy",
-            "version": "1.13.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/07d290f0c47959fd5eed98c95ee5602db07e0b6a",
-                "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0"
-            },
-            "conflict": {
-                "doctrine/collections": "<1.6.8",
-                "doctrine/common": "<2.13.3 || >=3 <3.2.2"
-            },
-            "require-dev": {
-                "doctrine/collections": "^1.6.8",
-                "doctrine/common": "^2.13.3 || ^3.2.2",
-                "phpspec/prophecy": "^1.10",
-                "phpunit/phpunit": "^7.5.20 || ^8.5.23 || ^9.5.13"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/DeepCopy/deep_copy.php"
-                ],
-                "psr-4": {
-                    "DeepCopy\\": "src/DeepCopy/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Create deep copies (clones) of your objects",
-            "keywords": [
-                "clone",
-                "copy",
-                "duplicate",
-                "object",
-                "object graph"
-            ],
-            "support": {
-                "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.4"
-            },
-            "funding": [
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/myclabs/deep-copy",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2025-08-01T08:46:24+00:00"
-        },
-        {
             "name": "nunomaduro/collision",
             "version": "v8.9.1",
             "source": {
@@ -7802,53 +8439,6 @@
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/2.0.0"
             },
             "time": "2026-01-06T21:53:42+00:00"
-        },
-        {
-            "name": "phpstan/phpdoc-parser",
-            "version": "2.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "a004701b11273a26cd7955a61d67a7f1e525a45a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/a004701b11273a26cd7955a61d67a7f1e525a45a",
-                "reference": "a004701b11273a26cd7955a61d67a7f1e525a45a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.4 || ^8.0"
-            },
-            "require-dev": {
-                "doctrine/annotations": "^2.0",
-                "nikic/php-parser": "^5.3.0",
-                "php-parallel-lint/php-parallel-lint": "^1.2",
-                "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-phpunit": "^2.0",
-                "phpstan/phpstan-strict-rules": "^2.0",
-                "phpunit/phpunit": "^9.6",
-                "symfony/process": "^5.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "PHPStan\\PhpDocParser\\": [
-                        "src/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "support": {
-                "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.2"
-            },
-            "time": "2026-01-25T14:56:51+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
