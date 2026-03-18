@@ -42,9 +42,6 @@ class UserSyncHandler implements Handler
 
     private function syncToReplica(array $userData)
     {
-        // Re-mapping from Users table format to Roles table format
-        // source 'id' -> roles 'user_id'
-        // source 'role' -> roles 'name'
         $dataToSync = [
             'user_id' => $userData['id'],
             'name' => $userData['role'],
@@ -53,7 +50,10 @@ class UserSyncHandler implements Handler
 
         DB::table('roles')->updateOrInsert(
             ['user_id' => $dataToSync['user_id']],
-            array_merge($dataToSync, ['created_at' => now()])
+            array_merge($dataToSync, [
+                'created_at' => now(),
+                'updated_at' => now()
+            ])
         );
     }
 
