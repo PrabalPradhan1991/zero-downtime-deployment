@@ -64,6 +64,19 @@ return [
             ]) : [],
         ],
 
+        'mysql_replica' => [
+            'driver' => 'mysql',
+            'host' => env('DB_REPLICA_HOST', '127.0.0.1'),
+            'port' => env('DB_REPLICA_PORT', '3306'),
+            'database' => env('DB_REPLICA_DATABASE', 'laravel'),
+            'username' => env('DB_REPLICA_USERNAME', 'root'),
+            'password' => env('DB_REPLICA_PASSWORD', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+        ],
+
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),

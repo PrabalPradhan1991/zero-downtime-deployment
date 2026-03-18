@@ -17,7 +17,7 @@ RUN composer install \
 # ─────────────────────────────────────────────────────────────
 #  Stage 2 — Runtime image
 # ─────────────────────────────────────────────────────────────
-FROM php:8.2-fpm-alpine
+FROM php:8.3-fpm-alpine
 
 # System & PHP extensions
 RUN apk add --no-cache \
@@ -29,6 +29,14 @@ RUN apk add --no-cache \
         libzip-dev \
         oniguruma-dev \
         libxml2-dev \
+        librdkafka-dev \
+        autoconf \
+        gcc \
+        make \
+        g++ \
+    && pecl install rdkafka \
+    && docker-php-ext-enable rdkafka \
+    && apk del autoconf gcc make g++ \
     && docker-php-ext-install \
         pdo \
         pdo_mysql \
@@ -38,7 +46,8 @@ RUN apk add --no-cache \
         bcmath \
         zip \
         opcache \
-    && rm -rf /var/cache/apk/*
+    && rm -rf /var/cache/apk/* \
+    && mkdir -p /var/log/supervisor
 
 # OPcache tuning for Laravel
 RUN { \
