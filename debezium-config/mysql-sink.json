@@ -1,0 +1,25 @@
+{
+  "name": "mysql-sink-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "connection.url": "jdbc:mysql://mysql-replica:3306/app_replica",
+    "connection.username": "root",
+    "connection.password": "root_password",
+    "insert.mode": "upsert",
+    "delete.enabled": "true",
+    "primary.key.mode": "record_key",
+    "schema.evolution": "basic",
+    "database.time_zone": "UTC",
+    "topics": "dbserver1.app_primary.users",
+    "table.name.format": "users",
+    "use.mysql.driver": "true",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "true",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "true",
+    "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",
+    "schema.history.internal.kafka.topic": "schemahistory.app_primary",
+    "schema.history.internal.store.only.captured.tables.ddl": "true"
+  }
+}
