@@ -18,6 +18,7 @@ class SyncRoleCommand extends Command
     public function handle()
     {
         $consumer = Kafka::consumer(["dbserver1.app_primary.users"])
+        ->withConsumerGroupId('sync-role-command')
             ->withBrokers(config('kafka.brokers', 'kafka:9092'))
             ->withAutoCommit()
             ->withHandler(new UserSyncHandler)

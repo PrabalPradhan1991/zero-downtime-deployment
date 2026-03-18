@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserCreateRequest;
 use App\Http\Requests\UserEditRequest;
+use App\Models\Role;
 use App\Models\User;
+use Illuminate\Support\Arr;
 
 class UserController extends Controller
 {
@@ -21,8 +23,17 @@ class UserController extends Controller
      */
     public function store(UserCreateRequest $request)
     {
-        $data = $request->validated();
-        return User::create($data);
+       $data = Arr::except($request->validated(), 'role');
+       $user = User::create($data);
+
+       $roles = Arr::get($request->validated(), 'role', []);
+       collect($roles)->each(function($role) use ($user) {
+           Role::create([
+               'user_id' => $user->id,
+               'role' => $role
+           ]);
+       });
+       return $user;
     }
 
     /**
@@ -38,8 +49,17 @@ class UserController extends Controller
      */
     public function update(UserEditRequest $request, string $id)
     {
-        $data = $request->validated();
+        $data = Arr::except($request->validated(), 'role');
         User::where('id', $id)->update($data);
+
+        $roles = Arr::get($request->validated(), 'role', []);
+        Role::where('user_id', $id)->delete();
+        collect($roles)->each(function($role) use ($id) {
+            Role::create([
+                'user_id' => $id,
+                'role' => $role
+            ]);
+        });
         return User::find($id);
     }
 
@@ -48,6 +68,7 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
+        Role::where('user_id', $id)->delete();
         User::where('id', $id)->delete();
         return response()->json(['message' => 'deleted']);
     }
