@@ -33,7 +33,7 @@ class UserController extends Controller
                'role' => $role
            ]);
        });
-       return $user;
+       return User::with(['roles'])->find($user->id, ['id', 'name', 'email']);
     }
 
     /**
@@ -41,7 +41,7 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        return User::find($id);
+        return User::with(['roles'])->find($id, ['id', 'name', 'email']);
     }
 
     /**
@@ -60,7 +60,7 @@ class UserController extends Controller
                 'role' => $role
             ]);
         });
-        return User::find($id);
+        return User::with(['roles'])->find($id, ['id', 'name', 'email']);
     }
 
     /**
