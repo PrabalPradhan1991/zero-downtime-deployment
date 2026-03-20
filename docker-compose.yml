@@ -221,6 +221,6 @@ services:
     ports:
       - "8001:8000"
     volumes:
-      - ./example-app-v2:/var/www/html
+      - ./sync-data:/var/www/html
     networks:
       - debezium-net
